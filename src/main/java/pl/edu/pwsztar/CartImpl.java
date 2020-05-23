@@ -2,14 +2,11 @@ package pl.edu.pwsztar;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
-import java.util.stream.Stream;
 
 public class CartImpl implements Cart {
 
     private List<Item> shoppingCart = new ArrayList<>();
     private final static int TOTAL = 500;
-
 
     @Override
     public List<Item> getAllProductsFromCart() {
@@ -59,8 +56,6 @@ public class CartImpl implements Cart {
     public Item getItem(String name){
         return shoppingCart.get(findIndexOfItem(name));
     }
-
-
 
     private int findIndexOfItem(String name){
         for(int i =0; i< shoppingCart.size(); i++ ){
